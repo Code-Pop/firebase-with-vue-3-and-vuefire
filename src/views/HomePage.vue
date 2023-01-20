@@ -7,44 +7,12 @@ import BaseContainer from '@/components/base/BaseContainer.vue'
 import BaseForm from '@/components/base/BaseForm.vue'
 import BaseInput from '@/components/base/BaseInput.vue'
 
-const cafeCollection = ref([
-  {
-    id: '413a9451-1b56-4219-86d7-2334c84beaac',
-    name: 'A Queso The Mondays',
-    location: 'Mexico',
-    price: 1,
-    rating: 4,
-    favorite: true,
-    description: '',
-  },
-  {
-    id: 'c686d673-34d3-4bff-983a-759bca3d0e20',
-    name: 'Pita Pan',
-    location: 'Neverland',
-    price: 2,
-    rating: 3.5,
-    favorite: false,
-    description: '',
-  },
-  {
-    id: '64596986-ba74-4238-b754-dc186656a654',
-    name: 'Tamago Never Dies',
-    location: 'United Kingdom',
-    price: 4,
-    rating: 5,
-    favorite: true,
-    description: '',
-  },
-  {
-    id: 'dd1b89d7-aec8-4968-aac8-c4c0281a9103',
-    name: "The Pesto's Yet to Come",
-    location: 'Italy',
-    price: 3,
-    rating: 0,
-    favorite: false,
-    description: '',
-  },
-])
+import { useFirestore, useCollection } from 'vuefire'
+import { collection } from 'firebase/firestore'
+
+const db = useFirestore()
+
+const cafeCollection = useCollection(collection(db, 'cafes'))
 
 const filterParams = ref({
   text: '',
