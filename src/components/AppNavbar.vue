@@ -6,6 +6,7 @@
     <v-spacer></v-spacer>
     <nav class="pr-4">
       <v-btn to="/">Home</v-btn>
+      <v-btn to="/new">New</v-btn>
     </nav>
   </v-app-bar>
 </template>
