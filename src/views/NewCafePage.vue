@@ -1,11 +1,17 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useFirestore } from 'vuefire'
+import { collection, addDoc } from 'firebase/firestore'
 import BaseButton from '@/components/base/BaseButton.vue'
 import BaseCheckbox from '@/components/base/BaseCheckbox.vue'
 import BaseContainer from '@/components/base/BaseContainer.vue'
 import BaseCard from '@/components/base/BaseCard.vue'
 import BaseForm from '@/components/base/BaseForm.vue'
 import BaseInput from '@/components/base/BaseInput.vue'
+
+const db = useFirestore()
+const router = useRouter()
 
 const newCafe = ref({
   name: '',
@@ -14,6 +20,17 @@ const newCafe = ref({
   price: 1,
   favorite: false,
 })
+
+// Add a new document with a generated id.
+async function addCafe() {
+  const newDoc = await addDoc(collection(db, 'cafes'), {
+    ...newCafe.value,
+  })
+
+  if (newDoc.id) {
+    router.push('/')
+  }
+}
 </script>
 
 <template>
