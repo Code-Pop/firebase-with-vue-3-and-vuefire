@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'new-cafe',
       component: () => import('@/views/NewCafePage.vue'),
     },
+    {
+      path: '/cafe/:id',
+      name: 'edit-cafe',
+      component: () => import('@/views/EditCafePage.vue'),
+    },
   ],
 })
 
