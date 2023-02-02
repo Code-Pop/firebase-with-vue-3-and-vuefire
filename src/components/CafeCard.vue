@@ -88,7 +88,7 @@ const priceSymbol = computed(() => {
       {{ priceSymbol }}
     </template>
     <template v-slot:actions>
-      <BaseButton color="primary" disabled>
+      <BaseButton color="primary" :to="`/cafe/${docId}`">
         <BaseIcon icon="mdi-pencil" class="mr-1" /> Edit
       </BaseButton>
       <BaseButton color="error" text disabled>
