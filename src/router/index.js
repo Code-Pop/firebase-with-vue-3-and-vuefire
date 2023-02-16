@@ -19,6 +19,11 @@ const router = createRouter({
       name: 'edit-cafe',
       component: () => import('@/views/EditCafePage.vue'),
     },
+    {
+      path: '/sign-in',
+      name: 'sign-in',
+      component: () => import('@/views/SignInPage.vue'),
+    },
   ],
 })
 

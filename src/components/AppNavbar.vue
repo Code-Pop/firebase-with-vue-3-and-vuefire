@@ -7,6 +7,7 @@
     <nav class="pr-4">
       <v-btn to="/">Home</v-btn>
       <v-btn to="/new">New</v-btn>
+      <v-btn to="/sign-in">Sign-In</v-btn>
     </nav>
   </v-app-bar>
 </template>
