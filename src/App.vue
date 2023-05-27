@@ -6,8 +6,6 @@ import AppLayout from './layouts/AppLayout.vue'
 
 const route = useRoute()
 const auth = useFirebaseAuth()
-
-console.log(auth)
 </script>
 
 <template>
