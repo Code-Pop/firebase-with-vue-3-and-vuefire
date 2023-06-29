@@ -4,7 +4,6 @@ import { signOut } from '@firebase/auth'
 import BaseButton from './base/BaseButton.vue'
 
 const user = useCurrentUser()
-console.log(user)
 
 const auth = useFirebaseAuth()
 
