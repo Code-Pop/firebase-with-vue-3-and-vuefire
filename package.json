@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@mdi/font": "^7.1.96",
-    "firebase": "^9.15.0",
+    "@vue/language-core": "^2.2.0",
+    "firebase": "^11.1.0",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6",
+    "vue-template-compiler": "^0.1.0",
     "vuefire": "^3.0.1",
     "vuetify": "^3.0.6"
   },
